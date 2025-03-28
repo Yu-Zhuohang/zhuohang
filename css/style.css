@@ -2833,7 +2833,7 @@ html.is-animating .fade-left {
 /*# sourceMappingURL=style.css.map */
 
 
-
+/* color change setting button begin */
 .art-color-settings {
   position: relative;
   margin-left: -1px;
@@ -2914,4 +2914,24 @@ html.is-animating .fade-left {
 .art-color-btn.active {
   border-color: #fff;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+/* color change setting button end */
+
+
+
+
+.img-preview {
+  display: none;
+  position: absolute;
+  bottom: -60px;
+  right: 50px;
+}
+
+.img-preview img {
+  width: 100px;
+  height: auto;
+}
+
+.img-link:hover + .img-preview {
+  display: block;
 }
