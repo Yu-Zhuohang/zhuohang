@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/plugins/fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/color.css">
-  <title>Zhuohang Yu</title>
+  <title>Zhuohang Yu (余卓航) - Contact</title>
 </head>
 
 <body>
@@ -185,11 +185,11 @@
             </div>
 
             <div class="art-ls-social">
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
+              <a href="#" onclick="openModal('qq')"><i class="fab fa-qq"></i></a>
+              <a href="#" onclick="openModal('wechat')"><i class="fab fa-weixin"></i></a>
+              <a href="https://github.com/yu-zhuohang" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" onclick="openModal('email')"><i class="fas fa-envelope"></i></a>
+              <a href="#" onclick="openModal('location')"><i class="fas fa-map-marker-alt"></i></a>
             </div>
 
           </div>
@@ -197,6 +197,84 @@
 
         </div>
         <!-- info bar end -->
+
+        <!-- QQ弹窗 -->
+        <div id="qq-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">QQ Contact</h3>
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p class="contact-info">898430524</p>
+              <p>Scan the QR code to add my QQ</p>
+              <img src="files/QQ.png" alt="QQ二维码" class="contact-qr">
+              <div style="text-align: center;">
+                <button class="contact-action" onclick="copyToClipboard('898430524')">
+                  <i class="fas fa-copy"></i> Copy QQ Number
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 微信弹窗 -->
+        <div id="wechat-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">WeChat Contact</h3>
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p class="contact-info">YuZhuohang_WeChat</p>
+              <p>Scan the QR code to add my wechat</p>
+              <img src="files/WeChat.png" alt="微信二维码" class="contact-qr">
+              <div style="text-align: center;">
+                <button class="contact-action" onclick="copyToClipboard('YuZhuohang_WeChat')">
+                  <i class="fas fa-copy"></i> Copy WeChat Number
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 邮箱弹窗 -->
+        <div id="email-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">E-Mail</h3>
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p class="contact-info">yuzhuohang2004@foxmail.com</p>
+              <div style="display: flex; justify-content: center; gap: 1.5rem;">
+                <a href="mailto:yuzhuohang2004@foxmail.com" class="contact-action">
+                  <i class="fas fa-paper-plane"></i> Send Mail
+                </a>                    
+                <button class="contact-action" onclick="copyToClipboard('yuzhuohang2004@foxmail.com')">
+                  <i class="fas fa-copy"></i> Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 地址弹窗 -->
+        <div id="location-modal" class="modal">
+          <div class="modal-content-map">
+            <div class="modal-header">
+              <h3 class="modal-title">My Address</h3>
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <iframe src="map.html" style="width: 100%; height: 500px; position: relative; overflow: hidden;"
+                width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+              <button class="contact-action" onclick="copyToClipboard('湖北省武汉市洪山区南李路28号')" style="margin-top: 1rem;">
+                <i class="fas fa-copy"></i> Copy Address
+              </button>
+            </div>
+          </div>
+        </div>
 
         <!-- content -->
         <div class="art-content">
@@ -364,6 +442,7 @@
                       <li class="menu-item"><a href="portfolio-single-2.html">Single project 2</a></li>
                     </ul>
                   </li> -->
+                  <li class="menu-item"><a href="certificate.html">Certificate</a></li>
                   <li class="menu-item"><a href="history.html">History</a></li>
                   <li class="menu-item current-menu-item"><a href="contact.html">Contact</a></li>
                   <!-- <li class="menu-item menu-item-has-children">
@@ -437,6 +516,7 @@
   <script src="js/function/age.js"></script>
   <script src="js/function/mail.js"></script>
   <script src="js/function/change-color.js"></script>
+  <script src="js/function/contact-icon.js"></script>
 
   <script src="js/main.js"></script>
 

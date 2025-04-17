@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>设备模拟器</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    .top-bar {
+      position: fixed;
+      display: flex;
+      width: 100vw;
+      background-color: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top-bar h3 {
+      margin-left: 2vw;
+      font-size: 1.3vw;
+    }
+
+    .top-bar input[type="url"],
+    .top-bar select {
+      padding-left: 1vw;
+      height: 6vh;
+      font-size: 1.2vw;
+      border-radius: 0.5vw;
+      border: 0.1vw solid #ddd;
+    }
+
+    .top-bar button {
+      padding: 0.5vw;
+      font-size: 1.5vw;
+      margin-left: 2vw;
+      background-color: #000;
+      color: white;
+      border: none;
+      border-radius: 0.5vw;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top-bar button:hover {
+      background-color: #333;
+    }
+
+    .content {
+      margin-top: 10vh;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    iframe {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top-bar">
+    <h3>输入模拟页面URL：</h3>
+    <input type="url" id="urlInput" value="http://127.0.0.1:5500" placeholder="请输入URL">
+    <h3>选择模拟设备：</h3>
+    <select id="deviceSelect">
+      <option value="mobile">手机 (360x640)</option>
+      <option value="tablet_L">平板竖屏 (768x1024)</option>
+      <option value="tablet_P">平板横屏 (1024x768)</option>
+      <option value="laptop">笔记本 (1366x768)</option>
+      <option value="desktop">台式机 (1920x1080)</option>
+    </select>
+    <!-- 使用 Font Awesome 图标作为按钮 -->
+    <button id="refreshButton"><i class="fas fa-sync-alt"></i></button>
+  </div>
+
+  <div class="content">
+    <iframe id="deviceFrame" width="360" height="640" src="http://127.0.0.1:5500" frameborder="0"></iframe>
+  </div>
+
+  <script>
+    const deviceSizes = {
+      mobile: { width: 360, height: 640 },
+      tablet_L: { width: 768, height: 1024 },
+      tablet_P: { width: 1024, height: 768 },
+      laptop: { width: 1366, height: 768 },
+      desktop: { width: 1920, height: 1080 }
+    };
+
+    const urlInput = document.getElementById('urlInput');
+    const deviceSelect = document.getElementById('deviceSelect');
+    const deviceFrame = document.getElementById('deviceFrame');
+    const refreshButton = document.getElementById('refreshButton');
+
+    urlInput.addEventListener('input', () => {
+      const url = urlInput.value;
+      deviceFrame.src = url;
+    });
+
+    deviceSelect.addEventListener('change', () => {
+      const selectedDevice = deviceSelect.value;
+      const { width, height } = deviceSizes[selectedDevice];
+
+      const aspectRatio = width / height;
+      const newWidth = window.innerWidth < width ? window.innerWidth : width;
+      const newHeight = newWidth / aspectRatio;
+
+      deviceFrame.width = newWidth;
+      deviceFrame.height = newHeight;
+    });
+
+    refreshButton.addEventListener('click', () => {
+      const currentUrl = urlInput.value;
+      deviceFrame.src = '';
+      deviceFrame.src = currentUrl;
+    });
+
+    window.addEventListener('load', () => {
+      const url = urlInput.value;
+      deviceFrame.src = url;
+
+      const defaultDevice = 'mobile';
+      deviceSelect.value = defaultDevice;
+      const { width, height } = deviceSizes[defaultDevice];
+      const aspectRatio = width / height;
+      const newWidth = window.innerWidth < width ? window.innerWidth : width;
+      const newHeight = newWidth / aspectRatio;
+
+      deviceFrame.width = newWidth;
+      deviceFrame.height = newHeight;
+    });
+  </script>
+</body>
+
+</html>

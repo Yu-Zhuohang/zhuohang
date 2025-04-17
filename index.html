@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/plugins/fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/color.css">
-  <title>Zhuohang Yu</title>
+  <title>Zhuohang Yu (余卓航) - Homepage</title>
 </head>
 
 <body>
@@ -185,11 +185,11 @@
             </div>
 
             <div class="art-ls-social">
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
-              <a href="#." target="_blank"><i class="far fa-circle"></i></a>
+              <a href="#" onclick="openModal('qq')"><i class="fab fa-qq"></i></a>
+              <a href="#" onclick="openModal('wechat')"><i class="fab fa-weixin"></i></a>
+              <a href="https://github.com/yu-zhuohang" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="#" onclick="openModal('email')"><i class="fas fa-envelope"></i></a>
+              <a href="#" onclick="openModal('location')"><i class="fas fa-map-marker-alt"></i></a>
             </div>
 
           </div>
@@ -197,6 +197,84 @@
 
         </div>
         <!-- info bar end -->
+
+        <!-- QQ弹窗 -->
+        <div id="qq-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">QQ Contact</h3>
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p class="contact-info">898430524</p>
+              <p>Scan the QR code to add my QQ</p>
+              <img src="files/QQ.png" alt="QQ二维码" class="contact-qr">
+              <div style="text-align: center;">
+                <button class="contact-action" onclick="copyToClipboard('898430524')">
+                  <i class="fas fa-copy"></i> Copy QQ Number
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 微信弹窗 -->
+        <div id="wechat-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">WeChat Contact</h3>
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p class="contact-info">YuZhuohang_WeChat</p>
+              <p>Scan the QR code to add my wechat</p>
+              <img src="files/WeChat.png" alt="微信二维码" class="contact-qr">
+              <div style="text-align: center;">
+                <button class="contact-action" onclick="copyToClipboard('YuZhuohang_WeChat')">
+                  <i class="fas fa-copy"></i> Copy WeChat Number
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 邮箱弹窗 -->
+        <div id="email-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">E-Mail</h3>
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <p class="contact-info">yuzhuohang2004@foxmail.com</p>
+              <div style="display: flex; justify-content: center; gap: 1.5rem;">
+                <a href="mailto:yuzhuohang2004@foxmail.com" class="contact-action">
+                  <i class="fas fa-paper-plane"></i> Send Mail
+                </a>                    
+                <button class="contact-action" onclick="copyToClipboard('yuzhuohang2004@foxmail.com')">
+                  <i class="fas fa-copy"></i> Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 地址弹窗 -->
+        <div id="location-modal" class="modal">
+          <div class="modal-content-map">
+            <div class="modal-header">
+              <h3 class="modal-title">My Address</h3>
+              <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+              <iframe src="map.html" style="width: 100%; height: 500px; position: relative; overflow: hidden;"
+                width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+              <button class="contact-action" onclick="copyToClipboard('湖北省武汉市洪山区南李路28号')" style="margin-top: 1rem;">
+                <i class="fas fa-copy"></i> Copy Address
+              </button>
+            </div>
+          </div>
+        </div>
 
         <!-- content -->
         <div class="art-content">
@@ -215,13 +293,13 @@
               <div class="container-fluid">
                 <div class="row p-60-0 p-lg-30-0 p-md-15-0">
                   <div class="col-lg-12">
-                    <div class="art-a art-banner" style="background-image: url(img/bg.jpg)">
+                    <div class="art-a art-banner" style="background-image: url(img/VCG211266346156.jpg)">
                       <div class="art-banner-back"></div>
                       <div class="art-banner-dec"></div>
                       <div class="art-banner-overlay">
                         <div class="art-banner-title">
-                          <h1 class="mb-15"><span data-lang-key="explore-my-personal">Explore my Personal
-                            </span><br><span data-lang-key="website!">Website!</span></h1>
+                          <h1 class="mb-15"><span>Explore my Personal
+                            </span><br><span>Homepage Website!</span></h1>
                           <div class="art-lg-text art-code mb-25">&lt;<i>code</i>&gt; <span class="txt-rotate"
                               data-period="2000"
                               data-rotate='[ "Hello, I&rsquo;m Zhuohang Yu.", "Glad to see you!", "Have a pleasant browse.", ":&#41" ]'></span>&lt;/<i>code</i>&gt;
@@ -284,672 +362,131 @@
               </div>
               <!-- counter box end -->
 
-              <!-- scholarships certificate -->
+              <!-- about me -->
               <div class="container-fluid">
                 <div class="row">
-
                   <div class="col-lg-12">
                     <div class="art-section-title">
                       <div class="art-title-frame">
-                        <h4 data-lang-key="scholarships_certificate">Scholarships Certificate</h4>
+                        <h4 data-lang-key="about_me">About Me</h4>
                       </div>
                     </div>
                   </div>
-
-                  <!-- 2022/2023 Certificate -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 class="mb-15" data-lang-key="2022/2023_certificate">2022/2023 Certificate</h5>
-                        <div class="tags">
-                          <span data-lang-key="first-class_scholarship"><i class="fas fa-trophy"></i>First-Class
-                            Scholarship</span>
-                          <span data-lang-key="college_student_pacesetter"><i class="fas fa-star"></i>College Student
-                            Pacesetter</span>
-                        </div>
-                        <div class="mb-15" data-lang-key="2022/2023_certificate_p">Achieved excellent results in the
-                          College Students' Quality Development
-                          Assessment during the 2022/2023 academic year, and was awarded the honorary title of
-                          "College Student Pacesetter" and received the first-class scholarship.</div>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="scholarship certificate" href="files/2022-2023 Certificate.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- 2023/2024 Certificate -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 class="mb-15" data-lang-key="2023/2024_certificate">2023/2024 Certificate</h5>
-                        <div class="tags">
-                          <span data-lang-key="first-class_scholarship"><i class="fas fa-trophy"></i>First-Class
-                            Scholarship</span>
-                          <span data-lang-key="college_student_pacesetter"><i class="fas fa-star"></i>College Student
-                            Pacesetter</span>
-                        </div>
-                        <div class="mb-15" data-lang-key="2022/2023_certificate_p">Achieved excellent results in the
-                          College Students' Quality Development
-                          Assessment during the 2022/2023 academic year, and was awarded the honorary title of
-                          "College Student Pacesetter" and received the first-class scholarship.</div>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="scholarship certificate" href="files/certificate.jpg"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- National Encouragement Scholarship -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 class="mb-15" data-lang-key="national_encouragement_scholarship">National Encouragement
-                          Scholarship</h5>
-                        <div class="tags">
-                          <span data-lang-key="national_encouragement_scholarship"><i class="fas fa-trophy"></i>National
-                            Encouragement Scholarship</span>
-                        </div>
-                        <div class="mb-15" data-lang-key="national_encouragement_scholarship_p">Study diligently, work
-                          hard and forge ahead, develop comprehensively in
-                          moral, intellectual, physical, aesthetic, labor and other aspects, and won the National
-                          Encouragement Scholarship for the 2022 - 2023 academic year.</div>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="scholarship certificate" href="files/certificate.jpg"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-              <!-- scholarships certificate end -->
-
-              <!-- competition certificate -->
-              <div class="container-fluid">
-                <div class="row">
-
                   <div class="col-lg-12">
                     <div class="art-section-title">
                       <div class="art-title-frame">
-                        <h4 data-lang-key="competition_certicifate">Competition Certificate</h4>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- International Genetically Engineered Machine Competition -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="igem">International Genetically Engineered Machine Competition</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="global_silver_award">Global Silver Award</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="undergrad_section"><i class="fas fa-user-tie"></i>Undergrad
-                            Section</span>
-                          <span data-lang-key="wiki_code_development"><i class="fas fa-code"></i>Wiki Code
-                            Development</span>
-                          <span data-lang-key="wiki_team_leader"><i class="fas fa-users"></i>Wiki Team Leader</span>
-                          <span data-lang-key="primary_programmer"><i class="fas fa-laptop-code"></i>Primary
-                            Programmer</span>
-                        </div>
-                        <p data-lang-key="igem_p">Participated in the 2024 iGEM Competition as a student member of team
-                          HBUT-Wuhan. Led the
-                          wiki team and contributed as the primary programmer for wiki development.</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="october_2024">October 2024</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/International Genetically Engineered Machine Competition.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
+                        <div class="about_me">
+                          <p>
+                            Yu Zhuohang, male, Han nationality, was born on July 29, 2004 in Suizhou, Hubei Province. He
+                            is a member of the Communist Youth League. He graduated from the School of Science (School
+                            of Chip Industry) of Hubei University of Technology in 2026, majoring in integrated circuit
+                            design and integrated systems.
+                          </p>
+                          <p>
+                            During my undergraduate study, I had excellent academic performance, won the first-class
+                            scholarship of the university for two consecutive years, and was awarded the honorary title
+                            of "college student model", won the national inspirational scholarship, participated in
+                            discipline competitions for three consecutive years, and won 10 provincial or above awards,
+                            actively participated in extracurricular activities, participated in academic lectures, and
+                            did public welfare volunteer activities, with a cumulative volunteer time of 106 hours. In
+                            my sophomore year, I founded Hubei Xunhang Technology Co., LTD., and served as the CEO and
+                            legal representative of the company.
+                          </p>
+                          <p>
+                            In terms of student work, I have served as peer tutor of School of Science, Hubei University
+                            of Technology, president of IC Association, and assistant tutor of freshman class 24, etc.
+                            In discipline competitions and scientific research projects, I have also served as team
+                            leader and core member for many times, accumulating a lot of experience in organization,
+                            management and teamwork.
+                          </p>
                         </div>
                       </div>
                     </div>
                   </div>
-
-                  <!-- The 5th "Huashu Cup" National College Students Mathematical Contest in Modeling -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="huashu_cup">The 5th "Huashu Cup" National College Students Mathematical
-                          Contest in Modeling</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="national_second_prize">National Second Prize </span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="mathematical_modeling"><i class="fas fa-chart-line"></i>Mathematical
-                            Modeling</span>
-                          <span data-lang-key="programming_code"><i class="fas fa-code"></i>Programming Code</span>
-                          <span data-lang-key="collect_data"><i class="fas fa-database"></i>Collect Data</span>
-                        </div>
-                        <p data-lang-key="huashu_cup_p1">Problem C: Foreigners' Tours in China.</p>
-                        <p data-lang-key="huashu_cup_p2">As a mathematical modeler, I'm mainly responsible for data
-                          collection, mathematical model
-                          construction, and algorithm framework establishment.</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="august_2024">August 2024</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 5th Huashu Cup National College Students Mathematical Contest in Modeling.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- The 8th (2024) China College IC Competition -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="china_college_ic_competition">The 8th (2024) China College IC Competition
-                        </h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="provincial_third_prize">Provincial Third Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="algorithm_design"><i class="fas fa-cogs"></i>Algorithm Design</span>
-                          <span data-lang-key="document_editing"><i class="fas fa-pencil-alt"></i>Document
-                            Editing</span>
-                          <span data-lang-key="conceive_solutions"><i class="fas fa-lightbulb"></i>Conceive
-                            Solutions</span>
-                        </div>
-                        <p data-lang-key="china_college_ic_competition_p1">Competition title: Huada Empyrean Cup -
-                          Capacitance extraction of parametric structure.</p>
-                        <p data-lang-key="china_college_ic_competition_p2">In the 8th (2024) China College IC
-                          Competition, won the third prize in Central China
-                          Division.</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="july_2024">July 2024</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 8th (2024) China College IC Competition.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- 2024 (10th) National College Student Statistical Modeling Competition -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="statistical_modeling_competition">2024 (10th) National College Student
-                          Statistical Modeling Competition</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="provincial_third_prize">Provincial Third Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="Statistical Modeling"><i class="fas fa-chart-line"></i>Statistical
-                            Modeling</span>
-                          <span data-lang-key="simulation_code"><i class="fas fa-cogs"></i>Simulation Code</span>
-                          <span data-lang-key="paper_writing"><i class="fas fa-file-alt"></i>Paper Writing</span>
-                          <span data-lang-key="team_leader"><i class="fas fa-users"></i>Team Leader</span>
-                        </div>
-                        <p data-lang-key="statistical_modeling_competition_p">Conducted research on "Statistical
-                          Modeling and Prediction of China's Century-long Monthly
-                          Precipitation Data." Responsible for simulation code development, paper writing, and
-                          formatting.</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="july_2024">July 2024</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/2024 (10th) National College Student Statistical Modeling Competition.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- The 17th China College Student Computer Design Competition -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="computer_design_competition">The 17th China College Student Computer Design
-                          Competition</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="provincial_third_prize">Provincial Third Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="programming_code"><i class="fas fa-code"></i>Programming Code</span>
-                        </div>
-                        <p data-lang-key="computer_design_competition_p1">Entry "Simulation and Prediction of Animal
-                          Husbandry Carbon Emissions Based on Regional
-                          Differences".</p>
-                        <p data-lang-key="computer_design_competition_p2">Won the third prize of Central South Regional
-                          Competition of China University Student
-                          Computer Design Competition in 2024 (17th).</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="may_2024">May 2024</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 17th China College Student Computer Design Competition.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- The 13th Asia and Pacific Mathematical Contest in Modeling -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="apmcm">The 13th Asia and Pacific Mathematical Contest in Modeling</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="third_prize">Third Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="mathematical_modeling"><i class="fas fa-chart-line"></i>Mathematical
-                            Modeling</span>
-                          <span data-lang-key="programming_code"><i class="fas fa-code"></i>Programming Code</span>
-                          <span data-lang-key="collect_data"><i class="fas fa-database"></i>Collect Data</span>
-                          <span data-lang-key="postgraduate_group"><i class="fas fa-users"></i>Postgraduate Group</span>
-                          <span data-lang-key="translation"><i class="fas fa-language"></i>Translation</span>
-                          <span data-lang-key="paper_writing"><i class="fas fa-file-alt"></i>Paper Writing</span>
-                          <span data-lang-key="team_leader"><i class="fas fa-users"></i>Team Leader</span>
-                        </div>
-                        <p data-lang-key="apmcm_p">Thesis title: The Development Trend of New Energy Electric Vehicles
-                          in China.</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="january_2024">January 2024</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 13th Asia and Pacific Mathematical Contest in Modeling.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- The 2023 National English Translation Competition for College Student -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="23netccs">The 2023 National English Translation Competition for College
-                          Student</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="provincial_first_prize">Provincial First Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="translation"><i class="fas fa-language"></i>Translation</span>
-                          <span data-lang-key="english_writing"><i class="fas fa-file-alt"></i>English Writing</span>
-                        </div>
-                        <p data-lang-key="23netccs_p">Sponsors of the National English Translation Competition for
-                          College Student (NEWCCS): College Foreign Language Teaching Research Association in Colleges
-                          and Universities, National Foreign Language Teaching and Research Collaboration Group in
-                          Normal Universities.</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="december_2023">December 2023</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 2023 National English Translation Competition for College Student.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- The 2nd "BETT Cup" National College Students English Vocabulary Competition -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="23bett">The 2nd "BETT Cup" National College Students English Vocabulary
-                          Competition</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="national_third_prize">National Third Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="vocabulary_translation"><i class="fas fa-font"></i>Vocabulary
-                            Translation</span>
-                        </div>
-                        <p data-lang-key="23bett_p">The second "BETT Cup" National College Students English Vocabulary
-                          Competition is hosted by the Foreign Studies Branch of China City Commerce Federation and is
-                          open to college students and foreign language enthusiasts.</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="november_2023">November 2023</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 2nd BETT Cup National College Students English Vocabulary Competition.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- The 9th "Quality Cup" Robot Innovation Competition of Hubei University of Technology -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="quality_cup">The 9th "Quality Cup" Robot Innovation Competition of Hubei
-                          University of Technology</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="university_first_prize">University First Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="hardware_construction"><i class="fas fa-cogs"></i>Hardware
-                            Construction</span>
-                          <span data-lang-key="software_programming"><i class="fas fa-code"></i>Software
-                            Programming</span>
-                          <span data-lang-key="burn_program"><i class="fas fa-fire"></i>Burn Program</span>
-                          <span data-lang-key="stm32_mcu"><i class="fas fa-microchip"></i>STM32 MCU</span>
-                        </div>
-                        <p data-lang-key="quality_cup_p">In this competition, we built an electromagnetic tracking smart
-                          car based on the STM32 microcontroller, and stood out among more than 100 participating teams
-                          and won the first place in the school.</p>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="november_2023">November 2023</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 9th Quality Cup Robot Innovation Competition of Hubei University of Technology.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- 2022 International English Essay Challenge for College Students -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="ieeccs">2022 International English Essay Challenge for College Students</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="third_prize">Third Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="composition_writing"><i class="fas fa-file-alt"></i>Composition
-                            Writing</span>
-                        </div>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="january_2023">January 2023</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/2022 International English Essay Challenge for College Students.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- The 2022 National English Translation Competition for College Student -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="22netccs">The 2022 National English Translation Competition for College
-                          Student</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="provincial_first_prize">Provincial First Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="translation"><i class="fas fa-language"></i>Translation</span>
-                          <span data-lang-key="english_writing"><i class="fas fa-file-alt"></i>English Writing</span>
-                        </div>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="december_2022">December 2022</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 2022 National English Translation Competition for College Student.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- The 2022 "BETT Cup" National College Students English Vocabulary Competition -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="art-a art-service-icon-box">
-                      <div class="art-service-ib-content">
-                        <h5 data-lang-key="22bett">The 2022 "BETT Cup" National College Students English Vocabulary
-                          Competition</h5>
-                        <div class="award">
-                          <i class="fas fa-trophy"></i>
-                          <span data-lang-key="national_third_prize">National Third Prize</span>
-                        </div>
-                        <div class="tags">
-                          <span data-lang-key="vocabulary_translation"><i class="fas fa-font"></i>Vocabulary
-                            Translation</span>
-                        </div>
-                        <p class="date"><strong data-lang-key="award_date">Award Date: </strong><span
-                            data-lang-key="november_2022">November 2022</span></p>
-                        <div class="art-buttons-frame">
-                          <a data-fancybox="contest certificate"
-                            href="files/The 2022 BETT Cup National College Students English Vocabulary Competition.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="view_certificate">View
-                            certificate</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
               </div>
-              <!-- competition certificate end -->
+              <!-- about me end -->
+
+              <!-- Honors and Awards -->
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="art-section-title">
+                      <div class="art-title-frame">
+                        <h4 data-lang-key="honors_and_awards">Honors and Awards</h4>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="certificate-li">
+                    <ul>
+                      <li><strong>First-Class Scholarship in Hubei University of Technology</strong> | <span
+                          class="award-type">College Student
+                          Pacesetter</span> | <em>Nov 2023</em></li>
+                      <li><strong>First-Class Scholarship in Hubei University of Technology</strong> | <span
+                          class="award-type">College Student
+                          Pacesetter</span> | <em>Nov 2024</em></li>
+                      <li><strong>National Encouragement Scholarship</strong> | <em>Nov 2023</em></li>
+                      <li><strong>International Genetically Engineered Machine Competition</strong> | <span
+                          class="award-type">Global Silver Award</span> | <em>Oct 2024</em></li>
+                      <li><strong>The 5th "Huashu Cup" National College Students Mathematical Contest in
+                          Modeling</strong> | <span class="award-type">National Second Prize</span> | <em>Aug 2024</em>
+                      </li>
+                      <li><strong>The 8th (2024) China College IC Competition</strong> | <span
+                          class="award-type">Provincial Third Prize</span> | <em>Jul 2024</em></li>
+                      <li><strong>2024 (10th) National College Student Statistical Modeling Competition</strong> | <span
+                          class="award-type">Provincial Third Prize</span> | <em>Jul 2024</em></li>
+                      <li><strong>The 17th China College Student Computer Design Competition</strong> | <span
+                          class="award-type">Provincial Third Prize</span> | <em>May 2024</em></li>
+                      <li><strong>The 13th Asia and Pacific Mathematical Contest in Modeling</strong> | <span
+                          class="award-type">Third Prize</span> | <em>Jan 2024</em></li>
+                      <li><strong>The 2023 National English Translation Competition for College Student</strong> | <span
+                          class="award-type">Provincial First Prize</span> | <em>Dec 2023</em></li>
+                      <li><strong>The 2nd "BETT Cup" National College Students English Vocabulary Competition</strong> |
+                        <span class="award-type">National Third Prize</span> | <em>Nov 2023</em>
+                      </li>
+                      <li><strong>The 9th "Quality Cup" Robot Innovation Competition of Hubei University of
+                          Technology</strong> | <span class="award-type">University First Prize</span> | <em>Nov
+                          2023</em></li>
+                      <li><strong>2022 International English Essay Challenge for College Students</strong> | <span
+                          class="award-type">Third Prize</span> | <em>Jan 2023</em></li>
+                      <li><strong>The 2022 National English Translation Competition for College Student</strong> | <span
+                          class="award-type">Provincial First Prize</span> | <em>Dec 2022</em></li>
+                      <li><strong>The 2022 "BETT Cup" National College Students English Vocabulary Competition</strong>
+                        | <span class="award-type">National Third Prize</span> | <em>Nov 2022</em></li>
+                    </ul>
+                    <div style="padding-left: 30px;">
+                      <a href="certificate.html" class="art-link art-color-link art-w-chevron">View details</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Honors and Awards end -->
 
               <!-- timeline -->
-              <div class="container-fluid">
+              <div class="container-fluid" style="margin-bottom: 30px;">
                 <div class="row p-30-0">
-                  <div class="col-lg-6">
+                  <div class="col-lg-12">
                     <div class="art-section-title">
                       <div class="art-title-frame">
-                        <h4 data-lang-key="education">Education</h4>
+                        <h4>Education</h4>
                       </div>
                     </div>
-
-                    <div class="art-timeline art-gallery">
-                      <div class="art-timeline-item">
-                        <div class="art-timeline-mark-light"></div>
-                        <div class="art-timeline-mark"></div>
-                        <div class="art-a art-timeline-content">
-                          <div class="art-card-header">
-                            <div class="art-left-side">
-                              <h5 data-lang-key="hubt">Hubei University of Technology</h5>
-                              <div class="art-el-suptitle mb-15" data-lang-key="bachelor">Bachelor</div>
-                            </div>
-                            <div class="art-right-side">
-                              <span class="art-date" data-lang-key="sep_2022-jun_2026">Sep 2022 - Jun 2026</span>
-                            </div>
-                          </div>
-                          <p data-lang-key="project-ic">Integrated Circuit Design and Integration System</p>
-                          <a data-fancybox="education"
-                            href="files/Educational Background Verification Report of the Ministry of Education (Online) .png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="certificate">Certificate</a>
-                        </div>
-                      </div>
-
-                      <div class="art-timeline-item">
-                        <div class="art-timeline-mark-light"></div>
-                        <div class="art-timeline-mark"></div>
-                        <div class="art-a art-timeline-content">
-                          <div class="art-card-header">
-                            <div class="art-left-side">
-                              <h5 data-lang-key="suizhou_second_middle_school">Suizhou Second Middle School</h5>
-                              <div class="art-el-suptitle mb-15" data-lang-key="student">Student</div>
-                            </div>
-                            <div class="art-right-side">
-                              <span class="art-date" data-lang-key="sec_2019-jun_2022">Sec 2019 - Jun 2022</span>
-                            </div>
-                          </div>
-                          <div data-lang-key="gaozhong">I have spent three rich and fulfilling years of high school
-                            here, which are filled with
-                            countless precious memories and personal growth.</div>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
-                  <div class="col-lg-6">
-                    <div class="art-section-title">
-                      <div class="art-title-frame">
-                        <h4 data-lang-key="work_history">Work History</h4>
-                      </div>
-                    </div>
-                    <div class="art-timeline">
-                      <div class="art-timeline-item">
-                        <div class="art-timeline-mark-light"></div>
-                        <div class="art-timeline-mark"></div>
-                        <div class="art-a art-timeline-content">
-                          <div class="art-card-header">
-                            <div class="art-left-side">
-                              <h5 data-lang-key="xunhang">Hubei Xunhang Technology Co., Ltd.</h5>
-                              <div class="art-el-suptitle mb-15" data-lang-key="job">Financial Officer, Executive
-                                Director</div>
-                            </div>
-                            <div class="art-right-side">
-                              <span class="art-date" data-lang-key="jan_2024-present">Jan 2024 - Present</span>
-                            </div>
-                          </div>
-                          <p data-lang-key="company-experience">This is the first company I founded during my college
-                            years, relying on the College Students' Entrepreneurship Park of Hubei University of
-                            Technology.</p>
-                          <p data-lang-key="company-introduce">Business items: Manufacturing of intelligent unmanned
-                            aerial vehicles, and manufacturing of other electronic devices.</p>
-                          <a data-fancybox="business-license" href="files/Business License.png"
-                            class="art-link art-color-link art-w-chevron" data-lang-key="business-license">Business
-                            License</a>
-                        </div>
-                      </div>
+
+                  <div class="certificate-li">
+                    <ul>
+                      <li><span>Bachelor</span> , <span>Hubei University of Technology</span> ,
+                        <span>Integrated Circuit Design and Integration System</span> , <em>Sep 2022 - Jun 2026</em>
+                      </li>
+                    </ul>
+                    <div style="padding-left: 30px;">
+                      <a href="history.html" class="art-link art-color-link art-w-chevron">View details</a>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- timeline end -->
-
-              <!-- contact -->
-              <div class="container-fluid">
-                <div class="row p-30-0">
-                  <div class="col-lg-12">
-                    <div class="art-section-title">
-                      <div class="art-title-frame">
-                        <h4 data-lang-key="contact_information">Contact Information</h4>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="art-a art-card">
-                      <div class="art-table p-15-15">
-                        <ul>
-                          <li>
-                            <h6 data-lang-key="country">Country:</h6><span data-lang-key="china">China</span>
-                          </li>
-                          <li>
-                            <h6 data-lang-key="city">City:</h6><span data-lang-key="wuhan">Wuhan</span>
-                          </li>
-
-                          <li>
-                            <h6 data-lang-key="streat">Streat:</h6><span data-lang-key="nanli_road">No. 28 Nanli
-                              Road</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="art-a art-card">
-                      <div class="art-table p-15-15">
-                        <ul>
-                          <li>
-                            <h6 data-lang-key="email">Email:</h6><span>yuzhuohang2004@foxmail.com</span>
-                          </li>
-                          <li>
-                            <h6>GitHub:</h6><span><a href="https://github.com/yu-zhuohang"
-                                target="_blank">github.com/yu-zhuohang</a></span>
-                          </li>
-                          <li>
-                            <h6 data-lang-key="website">WebSite:</h6><span><a href="https://yuzhuohang.asia"
-                                target="_blank">yuzhuohang.asia</a></span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-4">
-                    <div class="art-a art-card">
-                      <div class="art-table p-15-15">
-                        <ul>
-                          <li>
-                            <h6 data-lang-key="phone">Phone:</h6><span>15623365668</span>
-                          </li>
-                          <li>
-                            <h6>QQ:</h6>
-                            <span>
-                              <a href="https://qm.qq.com/q/Xg2lBtbTmU" target="_blank" class="img-link">898430524</a>
-                              <div class="img-preview">
-                                <img src="files/QQ.png" alt="QQ QR Code">
-                              </div>
-                            </span>
-                          </li>
-                          <li>
-                            <h6 data-lang-key="wechat">WeChat:</h6>
-                            <span>
-                              <a data-fancybox="wechat" href="files/WeChat.png" class="img-link">YuZhuohang_WeChat</a>
-                              <div class="img-preview">
-                                <img src="files/WeChat.png" alt="WeChat QR Code">
-                              </div>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="art-section-title">
-                      <div class="art-title-frame">
-                        <h4 data-lang-key="get_in_touch">Get in Touch</h4>
-                      </div>
-                    </div>
-                    <div class="art-a art-card">
-                      <form id="form" class="art-contact-form">
-                        <div class="art-form-field">
-                          <input id="name" name="name" class="art-input" type="text" placeholder="Name" required>
-                          <label for="name"><i class="fas fa-user"></i></label>
-                        </div>
-                        <div class="art-form-field">
-                          <input id="email" name="email" class="art-input" type="email" placeholder="Email" required>
-                          <label for="email"><i class="fas fa-at"></i></label>
-                        </div>
-                        <div class="art-form-field">
-                          <textarea id="message" name="text" class="art-input" placeholder="Message"
-                            required></textarea>
-                          <label for="message"><i class="far fa-envelope"></i></label>
-                        </div>
-                        <div class="art-submit-frame">
-                          <button class="art-btn art-btn-md art-submit" type="submit"><span
-                              data-lang-key="send_message">Send message</span></button>
-                          <div class="art-success">Success <i class="fas fa-check"></i></div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- contact end -->
 
               <!-- footer -->
               <div class="container-fluid">
@@ -994,6 +531,7 @@
                       <li class="menu-item"><a href="portfolio-single-2.html">Single project 2</a></li>
                     </ul>
                   </li> -->
+                  <li class="menu-item"><a href="certificate.html">Certificate</a></li>
                   <li class="menu-item"><a href="history.html">History</a></li>
                   <li class="menu-item"><a href="contact.html">Contact</a></li>
                   <!-- <li class="menu-item menu-item-has-children">
@@ -1067,9 +605,15 @@
   <script src="js/function/age.js"></script>
   <script src="js/function/mail.js"></script>
   <script src="js/function/change-color.js"></script>
+  <script src="js/function/contact-icon.js"></script>
 
   <script src="js/main.js"></script>
 
+  <script>
+    window.addEventListener('beforeunload', function () {
+      fetch('/shutdown', { method: 'GET', keepalive: true }).catch(() => { });
+    });
+  </script>
 </body>
 
 </html>
