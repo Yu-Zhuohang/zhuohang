@@ -1,0 +1,126 @@
+:root {
+    --main-color-1: #FFC107;
+    --main-color-2: #FF5722;
+    --main-color-3: #26f22d;
+    --main-color-4: #64B5F6;
+    --main-color-5: #d92df7;
+    --main-color: var(--main-color-1);
+  }
+
+
+  .art-link.art-color-link {
+    color: var(--main-color)
+  }
+  
+  .art-link.art-color-link:hover {
+    color: var(--main-color);
+  }
+  .art-btn {
+    background: var(--main-color);
+  }
+  
+  blockquote {
+    background: var(--main-color);
+  }
+  
+  .art-custom-list li:before {
+    border: solid 2px var(--main-color);
+  }
+  
+  .art-info-bar .art-header .art-avatar .art-lamp-light .art-available-lamp {
+    background: var(--main-color);
+  }
+  
+  .art-info-bar .art-name:hover a {
+    color: var(--main-color)
+  }
+  
+  .art-info-bar .art-knowledge-list li:before {
+    color: var(--main-color);
+  }
+  
+  .art-menu-bar .art-language-change li.art-active-lang {
+    background-color: var(--main-color);
+  }
+  
+  .art-code i {
+    color: var(--main-color)
+  }
+  
+  .art-counter-frame .art-counter-box .art-counter {
+    color: var(--main-color);
+  }
+  
+  .art-counter-frame .art-counter-box .art-counter-plus {
+    color: var(--main-color);
+  }
+  
+  .art-price.art-popular-price:before {
+    background: var(--main-color)
+  }
+  
+  .art-price .art-price-body .art-price-cost .art-number {
+    color: var(--main-color);
+  }
+  
+  .art-price .art-price-body .art-price-list li:before {
+    color: var(--main-color)
+  }
+  
+  .art-price .art-price-body .art-price-list li.art-empty-item:before {
+    color: var(--main-color)
+  }
+  
+  .art-testimonial .art-testimonial-footer .art-star-rate {
+    color: var(--main-color)
+  }
+  
+  .art-slider-navigation .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--main-color);
+  }
+  
+  .fancybox-progress {
+    background: var(--main-color);
+  }
+  
+  .fancybox-thumbs__list a:before {
+    border-color: var(--main-color);
+  }
+  
+  .art-timeline .art-timeline-item .art-timeline-mark {
+    border: solid 3px var(--main-color);
+  }
+  
+  .art-form-field textarea.art-active {
+    border-color: var(--main-color)
+  }
+  
+  .art-form-field textarea:focus {
+    border-color: var(--main-color)
+  }
+  
+  .art-contact-form .art-input.art-active+label, .art-contact-form .art-input:focus+label {
+    background: var(--main-color);
+  }
+  
+  .art-pagination .art-pagination-center a.art-active-pag {
+    color: var(--main-color)
+  }
+  
+  .art-preloader-load path:last-child {
+    stroke: var(--main-color);
+  }
+  
+  .art-line-progress path:last-child {
+    stroke: var(--main-color);
+  }
+  
+  .art-cirkle-progress path:last-child {
+    stroke: var(--main-color);
+  }
+  
+  
+  .art-service-ib-content .award i,
+  .art-service-ib-content .award span {
+    color: var(--main-color);
+  }
